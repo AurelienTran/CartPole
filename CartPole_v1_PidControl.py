@@ -31,7 +31,7 @@ for episod in range(10):
         ang_target = cart_error * P1 + cart_vel * D1 + pid1_integral * I1
 
         # PID calculation for angle
-        ang_error  = ang_target - ang_pos
+        ang_error = ang_target - ang_pos
         pid2_integral += ang_error
         output = ang_error * P2 + ang_vel * D2 + pid2_integral * I2
 
@@ -49,7 +49,7 @@ for episod in range(10):
         env.render()
 
         # Wait a little before going to next rendering frame
-        #time.sleep(0.01)
+        # time.sleep(0.01)
 
         # if episode is complete, start a new one
         if terminated or truncated:
